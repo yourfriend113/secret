@@ -1,0 +1,78 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("the legendary sword rpg")
+
+local b = w:CreateFolder("best swords")
+
+local a = w:CreateFolder("armors")
+
+local e = w:CreateFolder("rebirths")
+
+local r = w:CreateFolder("golds")
+
+local n = w:CreateFolder("destroy gui")
+
+b:Button("the devil's blade",function()
+local ohString1 = "Buy"
+local ohNumber2 = 0
+local ohString3 = "The Devil's Blade"
+game:GetService("Players").LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer(ohString1, ohNumber2, ohString3)
+end)
+
+b:Button("vilethorn",function()
+local ohString1 = "Buy"
+local ohNumber2 = 0
+local ohString3 = "Vilethorn"
+game:GetService("Players").LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer(ohString1, ohNumber2, ohString3)
+end)
+
+b:Button("sword of the behemoth",function()
+local ohString1 = "Buy"
+local ohNumber2 = 0
+local ohString3 = "Sword of the Behemoth"
+game:GetService("Players").LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer(ohString1, ohNumber2, ohString3)
+end)
+
+a:Button("dark dragon armor",function()
+
+local ohString1 = "Dark Dragon"
+
+game:GetService("Players").LocalPlayer.RemoteFunctions.ArmorSystem:FireServer(ohString1)
+end)
+
+a:Button("dark korblox armor",function()
+
+local ohString1 = "Dark Korblox"
+
+game:GetService("Players").LocalPlayer.RemoteFunctions.ArmorSystem:FireServer(ohString1)
+end)
+
+a:Button("Legendary armor",function()
+
+local ohString1 = "Legendary"
+
+game:GetService("Players").LocalPlayer.RemoteFunctions.ArmorSystem:FireServer(ohString1)
+end)
+
+e:Box("Box","number",function(value) -- "number" or "string"
+
+local ohNumber1 = (value)
+
+game:GetService("Players").LocalPlayer.RemoteFunctions.RebirthFunction:FireServer(ohNumber1)
+end)
+
+r:Button("inf golds",function()
+local ohString1 = "Buy"
+local ohNumber2 = -9999e9999
+local ohString3 = "Sword of the Behemoth"
+game:GetService("Players").LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer(ohString1, ohNumber2, ohString3)
+end)
+
+r:Button("Nan golds",function()
+local ohString1 = "Buy"
+local ohNumber2 = 9999e9999
+local ohString3 = "Sword of the Behemoth"
+game:GetService("Players").LocalPlayer.RemoteFunctions.SwordShopSystem:FireServer(ohString1, ohNumber2, ohString3)
+end)
+
+n:DestroyGui()
