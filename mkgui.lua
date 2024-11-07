@@ -4021,7 +4021,7 @@ if game.PlaceId == 17033012939 then
 		{button = Gui.RUWU, part = game:GetService("Workspace").ruwutp},
 		{button = Gui.TimeGod, part = game:GetService("Workspace").Tptimegod},
 		{button = Gui.Wawa, part = game:GetService("Workspace").Tpwawa},
-		-- {button = Gui.Incinerator, part = game:GetService("workspace").Tpincinerator},
+		
 		{button = Gui.Prima, part = game:GetService("Workspace").TpPrima},
 		{button = Gui.Grinderx, part = game:GetService("Workspace").Tpgrindx},
 		{button = Gui.Omniversal, part = game:GetService("Workspace").Tpomni},
@@ -4052,6 +4052,7 @@ if game.PlaceId == 17033012939 then
 	end
 end
 --[[
+-- {button = Gui.Incinerator, part = game:GetService("workspace").Tpincinerator},
 -- killstreak -- workspace.Lobby.ItemGivers:GetChildren()[29].Giver
 -- reaper -- workspace.Lobby.ItemGivers:GetChildren()[14].Giver
 -- dazzling -- workspace.Lobby.ItemGivers:GetChildren()[27].Giver
