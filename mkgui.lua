@@ -4028,29 +4028,28 @@ if game.PlaceId == 17033012939 then
 		{button = Gui.Truekillstreak, part = game:GetService("Workspace").Tptrueks},
 		{button = Gui.Hyperbola, part = game:GetService("Workspace").Tpextendedmega},
 	}
-local pickerData = {
-		{button = Gui.Killstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[29].Giver}
-	}
-
-local function KSFOVcreatetpsfunction(button: TextButton, tppart: Part)
-	if button and tppart then
-		button.MouseButton1Click:Connect(function()
-			player.Character:FindFirstChild'HumanoidRootPart'.CFrame = tppart.CFrame
-		end)
-	end
-end
-
-for _, data in pairs(teleportData) do
-	local success, errorMessage = pcall(function()
-		KSFOVcreatetpsfunction(data.button, data.part)
-	end)
+	local pickerData = {
+			{button = Gui.Killstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[29].Giver}
+		}
 	
-	if not success then
-		-- Log the error to the output for debugging
-		warn("Error while creating teleport function for button: ", data.button, "\nError: ", errorMessage)
+	local function KSFOVcreatetpsfunction(button: TextButton, tppart: Part)
+		if button and tppart then
+			button.MouseButton1Click:Connect(function()
+				player.Character:FindFirstChild'HumanoidRootPart'.CFrame = tppart.CFrame
+			end)
+		end
 	end
-end
-
+	
+	for _, data in pairs(teleportData) do
+		local success, errorMessage = pcall(function()
+			KSFOVcreatetpsfunction(data.button, data.part)
+		end)
+		
+		if not success then
+			-- Log the error to the output for debugging
+			warn("Error while creating teleport function for button: ", data.button, "\nError: ", errorMessage)
+		end
+	end
 end
 --[[
 -- killstreak -- workspace.Lobby.ItemGivers:GetChildren()[29].Giver
