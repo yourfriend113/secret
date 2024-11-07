@@ -3866,13 +3866,13 @@ Minimize.MouseButton1Click:Connect(function()
 	if not Minimized then
 		Minimized = true
 		Minimize.ImageRectOffset = Vector2.new(924, 884)
-		local minimizeGoal = { Position = UDim2.new(0, -338, 0, 78) } -- Position for minimized state
+		local minimizeGoal = { Position = UDim2.new(-0.289, 0, 0.160098523, 0) } -- Position for minimized state
 		local minimizeTween = TweenService:Create(MainFrame, MinimizeTweenInfo, minimizeGoal)
 		minimizeTween:Play()
 	else
 		Minimized = false
 		Minimize.ImageRectOffset = Vector2.new(124, 924)
-		local restoreGoal = { Position = UDim2.new(0, -76, 0, 78) } -- Position for expanded state
+		local restoreGoal = { Position = UDim2.new(-0.0651130974, 0, 0.160098523, 0) } -- Position for expanded state
 		local restoreTween = TweenService:Create(MainFrame, MinimizeTweenInfo, restoreGoal)
 		restoreTween:Play()
 	end
