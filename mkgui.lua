@@ -4051,6 +4051,7 @@ for _, data in pairs(teleportData) do
 	end
 end
 
+end
 --[[
 -- killstreak -- workspace.Lobby.ItemGivers:GetChildren()[29].Giver
 -- reaper -- workspace.Lobby.ItemGivers:GetChildren()[14].Giver
