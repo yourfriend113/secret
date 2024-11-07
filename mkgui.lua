@@ -1,3 +1,4 @@
+-- he did it
 -- local player
 
 local player = game.Players.LocalPlayer
@@ -724,7 +725,9 @@ local Gui = {
 	UICorner_106 = Instance.new("UICorner"),
 	Obliterator = Instance.new("TextButton"),
 	UICorner_107 = Instance.new("UICorner"),
+	RID = Instance.new("TextButton"),
 	UICorner_108 = Instance.new("UICorner"),
+	Pumpkin = Instance.new("TextButton"),
 	UICorner_109 = Instance.new("UICorner"),
 	KSFOVBdgSwords = Instance.new("ScrollingFrame"),
 	UIGridLayout_4 = Instance.new("UIGridLayout"),
@@ -806,41 +809,41 @@ local Gui = {
 	UICorner_147 = Instance.new("UICorner"),
 	bdgRng = Instance.new("TextButton"),
 	UICorner_148 = Instance.new("UICorner"),
+	bdgRID = Instance.new("TextButton"),
+	UICorner_149 = Instance.new("UICorner"),
 	KSFOVGpSwords = Instance.new("ScrollingFrame"),
 	UIGridLayout_5 = Instance.new("UIGridLayout"),
 	gpAmogus = Instance.new("TextButton"),
-	UICorner_149 = Instance.new("UICorner"),
-	gpMoneystreak = Instance.new("TextButton"),
 	UICorner_150 = Instance.new("UICorner"),
-	gpObliterator = Instance.new("TextButton"),
+	gpMoneystreak = Instance.new("TextButton"),
 	UICorner_151 = Instance.new("UICorner"),
-	gpIncinerator = Instance.new("TextButton"),
+	gpObliterator = Instance.new("TextButton"),
 	UICorner_152 = Instance.new("UICorner"),
-	gpDefender = Instance.new("TextButton"),
+	gpIncinerator = Instance.new("TextButton"),
 	UICorner_153 = Instance.new("UICorner"),
-	gpInsanity = Instance.new("TextButton"),
+	gpDefender = Instance.new("TextButton"),
 	UICorner_154 = Instance.new("UICorner"),
+	gpInsanity = Instance.new("TextButton"),
+	UICorner_155 = Instance.new("UICorner"),
 	KSFOVSecretSwords = Instance.new("ScrollingFrame"),
 	UIGridLayout_6 = Instance.new("UIGridLayout"),
 	secretCaseoh = Instance.new("TextButton"),
-	UICorner_155 = Instance.new("UICorner"),
-	secretOpTiem = Instance.new("TextButton"),
 	UICorner_156 = Instance.new("UICorner"),
-	secretLobotomypuredestruction = Instance.new("TextButton"),
+	secretOpTiem = Instance.new("TextButton"),
 	UICorner_157 = Instance.new("UICorner"),
+	secretLobotomypuredestruction = Instance.new("TextButton"),
+	UICorner_158 = Instance.new("UICorner"),
 }
 
 -- Insane Properties:
 
 Gui.KSFOVSwordden.Name = "KSFOVSwordden"
-Gui.KSFOVSwordden.Parent = MainFrame
+Gui.KSFOVSwordden.Parent = KSFOV
 Gui.KSFOVSwordden.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.KSFOVSwordden.BackgroundTransparency = 1.000
 Gui.KSFOVSwordden.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gui.KSFOVSwordden.BorderSizePixel = 0
-Gui.KSFOVSwordden.Position = UDim2.new(0.227, 0, 0, 0, 0)
-Gui.KSFOVSwordden.Size = UDim2.new(0.771, 0, 1, 0)
-Gui.KSFOVSwordden.Visible = false
+Gui.KSFOVSwordden.Size = UDim2.new(1, 0, 1, 0)
 
 Gui.KSFOVChooseSwCt.Name = "KSFOVChooseSwCt"
 Gui.KSFOVChooseSwCt.Parent = Gui.KSFOVSwordden
@@ -1531,7 +1534,7 @@ Gui.Radioactive.BackgroundColor3 = Color3.fromRGB(181, 181, 181)
 Gui.Radioactive.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gui.Radioactive.BorderSizePixel = 0
 Gui.Radioactive.LayoutOrder = 1
-Gui.Radioactive.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+Gui.Radioactive.Position = UDim2.new(0.0650000051, 0, 0.312776685, 0)
 Gui.Radioactive.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
 Gui.Radioactive.Font = Enum.Font.SourceSans
 Gui.Radioactive.Text = "Radioactive"
@@ -2821,6 +2824,42 @@ Gui.Obliterator.TextWrapped = true
 Gui.UICorner_107.CornerRadius = UDim.new(0.300000012, 0)
 Gui.UICorner_107.Parent = Gui.Obliterator
 
+Gui.RID.Name = "RID"
+Gui.RID.Parent = Gui.KSFOVTps
+Gui.RID.BackgroundColor3 = Color3.fromRGB(181, 181, 181)
+Gui.RID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gui.RID.BorderSizePixel = 0
+Gui.RID.LayoutOrder = 71
+Gui.RID.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+Gui.RID.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
+Gui.RID.Font = Enum.Font.SourceSans
+Gui.RID.Text = "Reaper Infused with darkness"
+Gui.RID.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.RID.TextScaled = true
+Gui.RID.TextSize = 14.000
+Gui.RID.TextWrapped = true
+
+Gui.UICorner_108.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_108.Parent = Gui.RID
+
+Gui.Pumpkin.Name = "Pumpkin"
+Gui.Pumpkin.Parent = Gui.KSFOVTps
+Gui.Pumpkin.BackgroundColor3 = Color3.fromRGB(181, 181, 181)
+Gui.Pumpkin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gui.Pumpkin.BorderSizePixel = 0
+Gui.Pumpkin.LayoutOrder = 72
+Gui.Pumpkin.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+Gui.Pumpkin.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
+Gui.Pumpkin.Font = Enum.Font.SourceSans
+Gui.Pumpkin.Text = "Pumpkin"
+Gui.Pumpkin.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.Pumpkin.TextScaled = true
+Gui.Pumpkin.TextSize = 14.000
+Gui.Pumpkin.TextWrapped = true
+
+Gui.UICorner_109.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_109.Parent = Gui.Pumpkin
+
 Gui.KSFOVBdgSwords.Name = "KSFOVBdgSwords"
 Gui.KSFOVBdgSwords.Parent = Gui.KSFOVSwordden
 Gui.KSFOVBdgSwords.Active = true
@@ -3541,6 +3580,24 @@ Gui.bdgRng.TextWrapped = true
 Gui.UICorner_148.CornerRadius = UDim.new(0.300000012, 0)
 Gui.UICorner_148.Parent = Gui.bdgRng
 
+Gui.bdgRID.Name = "bdgRID"
+Gui.bdgRID.Parent = Gui.KSFOVBdgSwords
+Gui.bdgRID.BackgroundColor3 = Color3.fromRGB(181, 181, 181)
+Gui.bdgRID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Gui.bdgRID.BorderSizePixel = 0
+Gui.bdgRID.LayoutOrder = 39
+Gui.bdgRID.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+Gui.bdgRID.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
+Gui.bdgRID.Font = Enum.Font.SourceSans
+Gui.bdgRID.Text = "Reaper Infused with darkness"
+Gui.bdgRID.TextColor3 = Color3.fromRGB(0, 0, 0)
+Gui.bdgRID.TextScaled = true
+Gui.bdgRID.TextSize = 14.000
+Gui.bdgRID.TextWrapped = true
+
+Gui.UICorner_149.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_149.Parent = Gui.bdgRID
+
 Gui.KSFOVGpSwords.Name = "KSFOVGpSwords"
 Gui.KSFOVGpSwords.Parent = Gui.KSFOVSwordden
 Gui.KSFOVGpSwords.Active = true
@@ -3575,8 +3632,8 @@ Gui.gpAmogus.TextScaled = true
 Gui.gpAmogus.TextSize = 14.000
 Gui.gpAmogus.TextWrapped = true
 
-Gui.UICorner_149.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_149.Parent = Gui.gpAmogus
+Gui.UICorner_150.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_150.Parent = Gui.gpAmogus
 
 Gui.gpMoneystreak.Name = "gpMoneystreak"
 Gui.gpMoneystreak.Parent = Gui.KSFOVGpSwords
@@ -3593,8 +3650,8 @@ Gui.gpMoneystreak.TextScaled = true
 Gui.gpMoneystreak.TextSize = 14.000
 Gui.gpMoneystreak.TextWrapped = true
 
-Gui.UICorner_150.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_150.Parent = Gui.gpMoneystreak
+Gui.UICorner_151.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_151.Parent = Gui.gpMoneystreak
 
 Gui.gpObliterator.Name = "gpObliterator"
 Gui.gpObliterator.Parent = Gui.KSFOVGpSwords
@@ -3611,8 +3668,8 @@ Gui.gpObliterator.TextScaled = true
 Gui.gpObliterator.TextSize = 14.000
 Gui.gpObliterator.TextWrapped = true
 
-Gui.UICorner_151.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_151.Parent = Gui.gpObliterator
+Gui.UICorner_152.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_152.Parent = Gui.gpObliterator
 
 Gui.gpIncinerator.Name = "gpIncinerator"
 Gui.gpIncinerator.Parent = Gui.KSFOVGpSwords
@@ -3629,8 +3686,8 @@ Gui.gpIncinerator.TextScaled = true
 Gui.gpIncinerator.TextSize = 14.000
 Gui.gpIncinerator.TextWrapped = true
 
-Gui.UICorner_152.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_152.Parent = Gui.gpIncinerator
+Gui.UICorner_153.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_153.Parent = Gui.gpIncinerator
 
 Gui.gpDefender.Name = "gpDefender"
 Gui.gpDefender.Parent = Gui.KSFOVGpSwords
@@ -3646,8 +3703,8 @@ Gui.gpDefender.TextScaled = true
 Gui.gpDefender.TextSize = 14.000
 Gui.gpDefender.TextWrapped = true
 
-Gui.UICorner_153.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_153.Parent = Gui.gpDefender
+Gui.UICorner_154.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_154.Parent = Gui.gpDefender
 
 Gui.gpInsanity.Name = "gpInsanity"
 Gui.gpInsanity.Parent = Gui.KSFOVGpSwords
@@ -3664,8 +3721,8 @@ Gui.gpInsanity.TextScaled = true
 Gui.gpInsanity.TextSize = 14.000
 Gui.gpInsanity.TextWrapped = true
 
-Gui.UICorner_154.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_154.Parent = Gui.gpInsanity
+Gui.UICorner_155.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_155.Parent = Gui.gpInsanity
 
 Gui.KSFOVSecretSwords.Name = "KSFOVSecretSwords"
 Gui.KSFOVSecretSwords.Parent = Gui.KSFOVSwordden
@@ -3700,8 +3757,8 @@ Gui.secretCaseoh.TextScaled = true
 Gui.secretCaseoh.TextSize = 14.000
 Gui.secretCaseoh.TextWrapped = true
 
-Gui.UICorner_155.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_155.Parent = Gui.secretCaseoh
+Gui.UICorner_156.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_156.Parent = Gui.secretCaseoh
 
 Gui.secretOpTiem.Name = "secretOpTiem"
 Gui.secretOpTiem.Parent = Gui.KSFOVSecretSwords
@@ -3718,8 +3775,8 @@ Gui.secretOpTiem.TextScaled = true
 Gui.secretOpTiem.TextSize = 14.000
 Gui.secretOpTiem.TextWrapped = true
 
-Gui.UICorner_156.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_156.Parent = Gui.secretOpTiem
+Gui.UICorner_157.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_157.Parent = Gui.secretOpTiem
 
 Gui.secretLobotomypuredestruction.Name = "secretLobotomypuredestruction"
 Gui.secretLobotomypuredestruction.Parent = Gui.KSFOVSecretSwords
@@ -3736,8 +3793,8 @@ Gui.secretLobotomypuredestruction.TextScaled = true
 Gui.secretLobotomypuredestruction.TextSize = 14.000
 Gui.secretLobotomypuredestruction.TextWrapped = true
 
-Gui.UICorner_157.CornerRadius = UDim.new(0.300000012, 0)
-Gui.UICorner_157.Parent = Gui.secretLobotomypuredestruction
+Gui.UICorner_158.CornerRadius = UDim.new(0.300000012, 0)
+Gui.UICorner_158.Parent = Gui.secretLobotomypuredestruction
 
 -- functions
 
@@ -4027,15 +4084,98 @@ if game.PlaceId == 17033012939 then
 		{button = Gui.Omniversal, part = game:GetService("Workspace"):FindFirstChild("Tpomni")},
 		{button = Gui.Truekillstreak, part = game:GetService("Workspace"):FindFirstChild("Tptrueks")},
 		{button = Gui.Hyperbola, part = game:GetService("Workspace"):FindFirstChild("Tpextendedmega")},
+		{button = Gui.RID, part = game:GetService("Workspace"):FindFirstChild("Tp67")},
 	}
 	local pickerData = {
-			{button = Gui.Killstreak, part = game:GetService("Workspace"):FindFirstChild("Lobby.ItemGivers:GetChildren()[29].Giver")}
+			{button = Gui.cKillstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[29].Giver},
+			{button = Gui.bdgReaper, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[14].Giver},
+			{button = Gui.bdgDazzling, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[27].Giver},
+			{button = Gui.cGlitch, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[25].Giver},
+			{button = Gui.cERroR, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[61].Giver},
+			{button = Gui.bdgOverheat, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[8].Giver},
+			{button = Gui.bdgAntimatter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[11].Giver},
+			{button = Gui.bdgTrihampter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[35].Giver},
+			{button = Gui.gpAmogus, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[21].Giver},
+			{button = Gui.bdgCultivator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[38].Giver},
+			{button = Gui.bdgRupture, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[13].Giver},
+			{button = Gui.bdgHampter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[7].Giver},
+			{button = Gui.bdgRadioactive, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[17].Giver},
+			{button = Gui.bdgGodly, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[12].Giver},
+			{button = Gui.secretCaseoh, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[39].Giver},
+			{button = Gui.bdgEquinox, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[9].Giver},
+			{button = Gui.bdgFish, part = game:GetService("Workspace").Lobby.ItemGivers.ItemGiver.Giver},
+			{button = Gui.bdgOpFish, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[32].Giver},
+			{button = Gui.bdgVoidFish, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[26].Giver},
+			{button = Gui.gpMoneystreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[10].Giver},
+			{button = Gui.cLobotomy, part = game:GetService("Workspace").ItemGiver.Giver},
+			{button = Gui.bdgLuminary, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[36].Giver},
+			{button = Gui.secretOpTiem, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[23].Giver},
+			{button = Gui.bdgTrojan, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[22].Giver},
+			{button = Gui.bdgInfinity, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[3].Giver},
+			{button = Gui.bdgCelebration, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[5].Giver},
+			{button = Gui.cFrozen, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[41].Giver},
+			{button = Gui.cMaxdesignpro, part = game:GetService("Workspace"):GetChildren()[30].Giver},
+			{button = Gui.cJimmypro, part = game:GetService("Workspace"):GetChildren()[129].Giver},
+			{button = Gui.cGlass, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[2].Giver},
+			{button = Gui.cTiem, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[4].Giver},
+			{button = Gui.bdgRAD, part = game:GetService("Workspace"):GetChildren()[28].Giver},
+			{button = Gui.cBlackhole, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[37].Giver},
+			{button = Gui.secretLobotomypuredestruction, part = game:GetService("Workspace"):GetChildren()[57].Giver},
+			{button = Gui.cRMP, part = game:GetService("Workspace"):GetChildren()[55].Giver},
+			{button = Gui.gpObliterator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[42].Giver},
+			{button = Gui.bdgRWE, part = game:GetService("Workspace"):GetChildren()[58].Giver},
+			{button = Gui.cGrinder, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[33].Giver},
+			{button = Gui.cHugeks, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[34].Giver},
+			{button = Gui.bdgRng, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[15].Giver},
+			{button = Gui.cOmmetaphobia, part = game:GetService("Workspace"):GetChildren()[32].Giver},
+			{button = Gui.cCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[31].Giver},
+			{button = Gui.bdgSolar, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[20].Giver},
+			{button = Gui.cExtended, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[16].Giver},
+			{button = Gui.bdgGoldenCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[40].Giver},
+			{button = Gui.bdgSupercelebration, part = game:GetService("Workspace"):GetChildren()[56].Giver},
+			{button = Gui.bdgDEX, part = game:GetService("Workspace"):GetChildren()[53].Giver},
+			{button = Gui.bdgRID, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[30].Giver},
+			{button = Gui.cOpks, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[18].Giver},
+			{button = Gui.gpInsanity, part = game:GetService("Workspace"):GetChildren()[27].Giver},
+			{button = Gui.bdgOceanic, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[24].Giver},
+			{button = Gui.bdgNoobstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[28].Giver},
+			{button = Gui.bdgParadox, part = game:GetService("Workspace"):GetChildren()[97].Giver},
+			{button = Gui.cObserver, part = game:GetService("Workspace"):GetChildren()[38].Giver},
+			{button = Gui.bdgInfiniplex, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[52].Giver},
+			{button = Gui.cTitanium, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[50].Giver},
+			{button = Gui.cTrueStreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[49].Giver},
+			{button = Gui.cElectro, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[48].Giver},
+			{button = Gui.cKilstek, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[47].Giver},
+			{button = Gui.bdgVoidCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[46].Giver},
+			{button = Gui.bdgSadReaper, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[45].Giver},
+			{button = Gui.gpDefender, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[44].Giver},
+			{button = Gui.bdgRUWU, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[43].Giver},
+			{button = Gui.bdgTimeGod, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[56].Giver},
+			{button = Gui.cWawa, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[65].Giver},
+			{button = Gui.bdgAbyss, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[64].Giver},
+			{button = Gui.gpIncinerator, part = game:GetService("Workspace"):GetChildren()[100].Giver},
+			{button = Gui.bdgPrima, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[51].Giver},
+			{button = Gui.cGrinderx, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[57].Giver},
+			{button = Gui.bdgOmniversal, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[63].Giver},
+			{button = Gui.bdgTruekillstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[60].Giver},
+			{button = Gui.cHyperbola, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[58].Giver},
+			{button = Gui.cAbsolute, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[55].Giver},
+			{button = Gui.bdgAquamarineCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[54].Giver},
+			{button = Gui.bdgTruecultivator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[59].Giver},
 		}
 	
-	local function KSFOVcreatetpsfunction(button: TextButton, tppart: Part)
+	local function KSFOVcreatetpsfunction(button, tppart)
 		if button and tppart then
 			button.MouseButton1Click:Connect(function()
 				player.Character:FindFirstChild'HumanoidRootPart'.CFrame = tppart.CFrame
+			end)
+		end
+	end
+
+	local function KSFOVcreatepickerfunction(button, part)
+		if button and part then
+			button.MouseButton1Click:Connect(function()
+				firetouchinterest(player.Character:FindFirstChild'HumanoidRootPart', part, 0)
 			end)
 		end
 	end
@@ -4050,87 +4190,99 @@ if game.PlaceId == 17033012939 then
 			warn("Error while creating teleport function for button: ", data.button, "\nError: ", errorMessage)
 		end
 	end
+
+	for _, data in ipairs(pickerData) do
+		local success, errorMessage = pcall(function()
+			KSFOVcreatepickerfunction(data.button, data.part)
+		end)
+		
+		if not success then
+			-- Log the error to the output for debugging
+			warn("Error while creating Picker function for button: ", data.button, "\nError: ", errorMessage)
+		end
+	end
+
 end
 --[[
 -- 
--- killstreak -- workspace.Lobby.ItemGivers:GetChildren()[29].Giver
--- reaper -- workspace.Lobby.ItemGivers:GetChildren()[14].Giver
--- dazzling -- workspace.Lobby.ItemGivers:GetChildren()[27].Giver
--- GLITCH -- workspace.Lobby.ItemGivers:GetChildren()[25].Giver
--- ERROR -- workspace.Lobby.ItemGivers:GetChildren()[61].Giver
--- overheat -- workspace.Lobby.ItemGivers:GetChildren()[8].Giver
--- antimatter -- workspace.Lobby.ItemGivers:GetChildren()[11].Giver
--- hamster ultimate gods -- workspace.Lobby.ItemGivers:GetChildren()[35].Giver
--- amogus -- workspace.Lobby.ItemGivers:GetChildren()[21].Giver
- -- cultivator -- workspace.Lobby.ItemGivers:GetChildren()[38].Giver
--- rupture -- workspace.Lobby.ItemGivers:GetChildren()[13].Giver
--- hampter -- workspace.Lobby.ItemGivers:GetChildren()[7].Giver
--- radioactive -- workspace.Lobby.ItemGivers:GetChildren()[17].Giver
--- godly -- workspace.Lobby.ItemGivers:GetChildren()[12].Giver
-game:GetService("Workspace").Tpcase -- nerfedcaseoh -- workspace.Lobby.ItemGivers:GetChildren()[39].Giver
--- equinoctial -- workspace.Lobby.ItemGivers:GetChildren()[9].Giver
--- fish -- workspace.Lobby.ItemGivers.ItemGiver.Giver
- -- opfish -- workspace.Lobby.ItemGivers:GetChildren()[32].Giver
- -- voidfish -- workspace.Lobby.ItemGivers:GetChildren()[26].Giver
- -- moneystreak -- workspace.Lobby.ItemGivers:GetChildren()[10].Giver
- -- lobotomy -- workspace.ItemGiver.Giver
- -- hampter -- workspace.Lobby.ItemGivers:GetChildren()[19].Giver
- -- luminary -- workspace.Lobby.ItemGivers:GetChildren()[36].Giver
-game:GetService("Workspace").Tp63 -- op tiem -- workspace.Lobby.ItemGivers:GetChildren()[23].Giver
- -- TROJAN -- workspace.Lobby.ItemGivers:GetChildren()[22].Giver
- -- inf -- workspace.Lobby.ItemGivers:GetChildren()[3].Giver
- -- celebration -- workspace.Lobby.ItemGivers:GetChildren()[5].Giver
- -- frozen -- workspace.Lobby.ItemGivers:GetChildren()[41].Giver
- -- maxdesignpro -- workspace:GetChildren()[30].Giver
- -- jimmypro -- workspace:GetChildren()[129].Giver
- -- glass -- workspace.Lobby.ItemGivers:GetChildren()[2].Giver
- -- tiem -- workspace.Lobby.ItemGivers:GetChildren()[4].Giver
- -- Reaper Absolute Death -- workspace:GetChildren()[28].Giver
- -- blackhole -- workspace.Lobby.ItemGivers:GetChildren()[37].Giver
-game:GetService("Workspace").LPDtp -- lobotomy pure destruction -- workspace:GetChildren()[57].Giver
- -- reaper most pathetic -- workspace:GetChildren()[55].Giver
- -- obliterator -- workspace.Lobby.ItemGivers:GetChildren()[42].Giver
--- reaper walmart edition -- workspace:GetChildren()[58].Giver
- -- grinder -- workspace.Lobby.ItemGivers:GetChildren()[33].Giver
- -- huge killstreak -- workspace.Lobby.ItemGivers:GetChildren()[34].Giver
- -- rng -- workspace.Lobby.ItemGivers:GetChildren()[15].Giver
- -- ommetaphobia -- workspace:GetChildren()[32].Giver
- -- clickstreak -- workspace.Lobby.ItemGivers:GetChildren()[31].Giver
- -- solar -- workspace.Lobby.ItemGivers:GetChildren()[20].Giver
- -- extended -- workspace.Lobby.ItemGivers:GetChildren()[16].Giver
- -- golden clickstreak -- workspace.Lobby.ItemGivers:GetChildren()[40].Giver
- -- supercelebration -- workspace:GetChildren()[56].Giver
- -- D.E.X -- workspace:GetChildren()[53].Giver
-game:GetService("Workspace").Tp67 -- Reaper Infused Darkness -- workspace.Lobby.ItemGivers:GetChildren()[30].Giver
- -- op killstreak -- workspace.Lobby.ItemGivers:GetChildren()[18].Giver
- -- insanity -- workspace:GetChildren()[27].Giver
- -- oceanic -- workspace.Lobby.ItemGivers:GetChildren()[24].Giver
- -- noobstreak -- workspace.Lobby.ItemGivers:GetChildren()[28].Giver
- -- paradox -- workspace:GetChildren()[97].Giver
- -- observer -- workspace:GetChildren()[38].Giver
-game:GetService("Workspace").Tppumpkin -- pumpkin -- workspace:GetChildren()[128].Giver
- -- infiniplex -- workspace.Lobby.ItemGivers:GetChildren()[52].Giver
- -- titanium -- workspace.Lobby.ItemGivers:GetChildren()[50].Giver
- -- truestreak -- workspace.Lobby.ItemGivers:GetChildren()[49].Giver
- -- electro -- workspace.Lobby.ItemGivers:GetChildren()[48].Giver
- -- kilstek -- workspace.Lobby.ItemGivers:GetChildren()[47].Giver
- -- void clickstreak -- workspace.Lobby.ItemGivers:GetChildren()[46].Giver
- -- sad reaper -- workspace.Lobby.ItemGivers:GetChildren()[45].Giver
- -- defender -- workspace.Lobby.ItemGivers:GetChildren()[44].Giver
- -- reaper uwu -- workspace.Lobby.ItemGivers:GetChildren()[43].Giver
- -- time god -- workspace.Lobby.ItemGivers:GetChildren()[56].Giver
- -- wawa -- workspace.Lobby.ItemGivers:GetChildren()[65].Giver
- -- abyss -- workspace.Lobby.ItemGivers:GetChildren()[64].Giver
- -- incinerator -- workspace:GetChildren()[100].Giver
- -- prima -- workspace.Lobby.ItemGivers:GetChildren()[51].Giver
- -- grinder x -- workspace.Lobby.ItemGivers:GetChildren()[57].Giver
- -- omni -- workspace.Lobby.ItemGivers:GetChildren()[63].Giver
- -- true killstreak -- workspace.Lobby.ItemGivers:GetChildren()[60].Giver
- -- hyperbola -- workspace.Lobby.ItemGivers:GetChildren()[58].Giver
--- ω -- workspace.Lobby.ItemGivers:GetChildren()[55].Giver
- -- aquamarine clickstreak -- workspace.Lobby.ItemGivers:GetChildren()[54].Giver
- -- true cultivator -- workspace.Lobby.ItemGivers:GetChildren()[59].Giver
- -- error -- workspace.Lobby.ItemGivers:GetChildren()[62].Giver
+-- killstreak --
+-- reaper -- 
+-- dazzling -- 
+-- GLITCH -- 
+-- ERROR -- 
+-- overheat -- 
+-- antimatter -- 
+-- hamster ultimate gods -- 
+-- amogus -- 
+ -- cultivator -- 
+-- rupture -- 
+-- hampter -- 
+-- radioactive -- 
+-- godly -- 
+game:GetService("Workspace").Tpcase -- nerfedcaseoh -- 
+-- equinoctial -- 
+-- fish -- 
+ -- opfish -- 
+ -- voidfish -- 
+ -- moneystreak -- 
+ -- lobotomy -- 
+ -- hampter -- 
+ -- luminary -- 
+game:GetService("Workspace").Tp63 -- op tiem -- 
+ -- TROJAN -- 
+ -- inf -- 
+ -- celebration -- 
+ -- frozen -- 
+ -- maxdesignpro -- 
+ -- jimmypro -- 
+ -- glass -- 
+ -- tiem -- 
+ -- Reaper Absolute Death -- 
+ -- blackhole -- 
+game:GetService("Workspace").LPDtp -- lobotomy pure destruction -- 
+ -- reaper most pathetic -- 
+ -- obliterator -- 
+-- reaper walmart edition -- 
+ -- grinder -- 
+ -- huge killstreak -- 
+ -- rng -- 
+ -- ommetaphobia -- 
+ -- clickstreak -- 
+ -- solar -- 
+ -- extended -- 
+ -- golden clickstreak -- 
+ -- supercelebration -- 
+ -- D.E.X -- 
+ -- Reaper Infused Darkness -- 
+ -- op killstreak -- 
+ -- insanity -- 
+ -- oceanic -- 
+ -- noobstreak -- 
+ -- paradox -- 
+ -- observer -- 
+game:GetService("Workspace").Tppumpkin -- pumpkin -- game:GetService("Workspace"):GetChildren()[128].Giver
+ -- infiniplex -- 
+ -- titanium -- 
+ -- truestreak -- 
+ -- electro -- 
+ -- kilstek -- 
+ -- void clickstreak -- 
+ -- sad reaper -- 
+ -- defender -- 
+ -- reaper uwu -- 
+ -- time god -- 
+ -- wawa -- 
+ -- abyss -- 
+ -- incinerator -- 
+ -- prima -- 
+ -- grinder x -- 
+ -- omni -- 
+ -- true killstreak -- 
+ -- hyperbola -- 
+-- ω -- 
+ -- aquamarine clickstreak -- 
+ -- true cultivator -- 
+ -- error -- 
 ]]
 
 --[[ game:GetService("Workspace").Tp1 -- killstreak -- workspace.Lobby.ItemGivers:GetChildren()[29].Giver
