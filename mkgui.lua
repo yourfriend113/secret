@@ -838,8 +838,8 @@ Gui.KSFOVSwordden.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Gui.KSFOVSwordden.BackgroundTransparency = 1.000
 Gui.KSFOVSwordden.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gui.KSFOVSwordden.BorderSizePixel = 0
-Gui.KSFOVSwordden.Position = UDim2.new(-0.00192054012, 0, 0, 0)
-Gui.KSFOVSwordden.Size = UDim2.new(0.999920607, 0, 1, 0)
+Gui.KSFOVSwordden.Position = UDim2.new(0.227, 0, 0, 0, 0)
+Gui.KSFOVSwordden.Size = UDim2.new(0.771, 0, 1, 0)
 Gui.KSFOVSwordden.Visible = false
 
 Gui.KSFOVChooseSwCt.Name = "KSFOVChooseSwCt"
