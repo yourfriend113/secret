@@ -4165,20 +4165,31 @@ if game.PlaceId == 17033012939 then
 		}
 	
 	local function KSFOVcreatetpsfunction(button, tppart)
-		if button and tppart then
-			button.MouseButton1Click:Connect(function()
-				player.Character:FindFirstChild'HumanoidRootPart'.CFrame = tppart.CFrame
-			end)
-		end
+	    if button and tppart then
+	        button.MouseButton1Click:Connect(function()
+	            local humanoidRootPart = player.Character:FindFirstChild('HumanoidRootPart')
+	            if humanoidRootPart and tppart:IsA("BasePart") then -- Check if HumanoidRootPart exists and tppart is a valid part
+	                humanoidRootPart.CFrame = tppart.CFrame
+	            else
+	                warn("Teleport failed: Missing or invalid part")
+	            end
+	        end)
+	    end
+	end
+	
+	local function KSFOVcreatepickerfunction(button, part)
+	    if button and part then
+	        button.MouseButton1Click:Connect(function()
+	            local humanoidRootPart = player.Character:FindFirstChild('HumanoidRootPart')
+	            if humanoidRootPart and part:IsA("BasePart") then -- Check if HumanoidRootPart exists and part is valid
+	                firetouchinterest(humanoidRootPart, part, 0)
+	            else
+	                warn("Picker failed: Missing or invalid part")
+	            end
+	        end)
+	    end
 	end
 
-	local function KSFOVcreatepickerfunction(button, part)
-		if button and part then
-			button.MouseButton1Click:Connect(function()
-				firetouchinterest(player.Character:FindFirstChild'HumanoidRootPart', part, 0)
-			end)
-		end
-	end
 	
 	for _, data in pairs(teleportData) do
 		local success, errorMessage = pcall(function()
