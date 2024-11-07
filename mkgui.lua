@@ -4021,7 +4021,7 @@ if game.PlaceId == 17033012939 then
 		{button = Gui.RUWU, part = game:GetService("Workspace").ruwutp},
 		{button = Gui.TimeGod, part = game:GetService("Workspace").Tptimegod},
 		{button = Gui.Wawa, part = game:GetService("Workspace").Tpwawa},
-		{button = Gui.Incinerator, part = game:GetService("workspace").Tpincinerator},
+		-- {button = Gui.Incinerator, part = game:GetService("workspace").Tpincinerator},
 		{button = Gui.Prima, part = game:GetService("Workspace").TpPrima},
 		{button = Gui.Grinderx, part = game:GetService("Workspace").Tpgrindx},
 		{button = Gui.Omniversal, part = game:GetService("Workspace").Tpomni},
