@@ -3943,11 +3943,15 @@ local currentAnimationTrack
 
 -- anim logger function
 
-local function adjustAnimLogCanvasSize()
-	local numLogs = #Animations:GetChildren() * 5
-	local newCanvasSizeY = numLogs * UIGridLayout.CellSize.Y.Offset
-	Animations.CanvasSize = UDim2.new(0, 0, 0, newCanvasSizeY + 10)
+-- Function to adjust the CanvasSize based on the number of logs
+local function adjustCanvasSize()
+    local numLogs = #Animations:GetChildren() - 1 -- Subtract 1 for the UIGridLayout
+    local newCanvasSizeY = math.max(numLogs * UIGridLayout.CellSize.Y.Offset, Animations.AbsoluteSize.Y)
+    
+    -- Set new CanvasSize with some buffer space
+    Animations.CanvasSize = UDim2.new(0, 0, 0, newCanvasSizeY + 10)
 end
+
 local function createTrackID(animationId)
 	local idNumber = animationId:match("rbxassetid://(%d+)")
 	if idNumber then
