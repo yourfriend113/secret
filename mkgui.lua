@@ -641,6 +641,7 @@ local Gui = {
 	cCS = Instance.new("TextButton"),
 	UICorner_11 = Instance.new("UICorner"),
 	cBlackhole = Instance.new("TextButton"),
+	UICorner_12 = Instance.new("UICorner"),
 	cLobotomy = Instance.new("TextButton"),
 	UICorner_13 = Instance.new("UICorner"),
 	cDIV = Instance.new("TextButton"),
