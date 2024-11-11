@@ -1,4 +1,4 @@
--- he did it
+-- Le Meowster
 -- local player
 
 local player = game.Players.LocalPlayer
@@ -381,6 +381,9 @@ Ctrlrun.TextColor3 = Color3.fromRGB(0, 0, 0)
 Ctrlrun.TextScaled = true
 Ctrlrun.TextSize = 14.000
 Ctrlrun.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_12.Parent = Ctrlrun
 
 KSFOV.Name = "KSFOV"
 KSFOV.Parent = MainFrame
