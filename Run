@@ -1,0 +1,85 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local runSpeed = 80 -- Speed when running
+local walkSpeed = humanoid.WalkSpeed -- Default walk speed
+local isRunning = false
+local afterimageDuration = 0.5 -- Duration for each afterimage
+local afterimageInterval = 0.02 -- Time between afterimages
+local c
+
+-- Animation ID for running
+local runAnimationId = "rbxassetid://13634395775" -- Replace with your animation ID
+
+-- Load run animation
+local runAnimation = Instance.new("Animation")
+runAnimation.AnimationId = runAnimationId
+local runAnimTrack = humanoid:LoadAnimation(runAnimation)
+runAnimTrack.Priority = Enum.AnimationPriority.Action
+
+-- Make the animation undisturbable by setting it as Looped
+runAnimTrack.Looped = true
+
+-- Function to create an afterimage
+local function createAfterimage()
+    local afterimage = humanoidRootPart:Clone()
+    afterimage.Transparency = 0.5
+    afterimage.CanCollide = false
+    afterimage.Anchored = true
+    afterimage.Name = "Afterimage"
+    afterimage.Color = Color3.fromRGB(255, 255, 255)
+    for _, v in pairs(afterimage:GetChildren()) do
+        v:Destroy()
+    end
+    afterimage.Parent = game.Workspace
+
+    local tweenInfo = TweenInfo.new(afterimageDuration, Enum.EasingStyle.Linear)
+    local fadeTween = TweenService:Create(afterimage, tweenInfo, { Transparency = 1 })
+    fadeTween:Play()
+
+    fadeTween.Completed:Connect(function()
+        afterimage:Destroy()
+    end)
+end
+
+-- Function to toggle running with afterimages and play animation
+local function toggleRun()
+    isRunning = not isRunning
+    if isRunning then
+        humanoid.WalkSpeed = runSpeed
+        c = humanoid.Changed:Connect(function(property)
+            if property == "WalkSpeed" then
+                -- If WalkSpeed is not equal to the desired runSpeed, set it to runSpeed
+                if humanoid.WalkSpeed ~= runSpeed then
+                    humanoid.WalkSpeed = runSpeed
+                end
+            end
+        end)
+        -- Continuously create afterimages while running
+        while isRunning do
+            if humanoid.MoveDirection.Magnitude > 0 then
+                createAfterimage()
+            end
+            if not runAnimTrack.IsPlaying then
+                runAnimTrack:Play()
+                runAnimTrack:AdjustWeight(10.0)
+            end
+            wait(afterimageInterval)
+        end
+    else
+        c:Disconnect()
+        humanoid.WalkSpeed = walkSpeed
+        runAnimTrack:Stop()
+    end
+end
+
+-- Keybind for toggling run (LeftCtrl)
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.LeftControl then -- Toggle run with LeftCtrl
+        toggleRun()
+    end
+end)
