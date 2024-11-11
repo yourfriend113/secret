@@ -3944,8 +3944,8 @@ local currentAnimationTrack
 -- anim logger function
 
 local function adjustAnimLogCanvasSize()
-	local numLogs = #Animations:GetChildren() * 3
-	local newCanvasSizeY = math.max(numLogs * UIGridLayout.CellSize.Y.Offset, Animations.AbsoluteSize.Y)
+	local numLogs = #Animations:GetChildren() * 5
+	local newCanvasSizeY = numLogs * UIGridLayout.CellSize.Y.Offset
 	Animations.CanvasSize = UDim2.new(0, 0, 0, newCanvasSizeY + 10)
 end
 local function createTrackID(animationId)
