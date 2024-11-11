@@ -4,6 +4,7 @@ local humanoid = character:WaitForChild("Humanoid")
 local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
+local Camera = workspace.CurrentCamera
 
 local sidestepDistance = 15 -- Distance for sidestep
 local backstepDistance = 6 -- Distance for backstep
@@ -48,7 +49,6 @@ local function createAfterimage()
     local fadeTween = TweenService:Create(afterimage, tweenInfo, {Transparency = 1})
     fadeTween:Play()
 
-    -- Cleanup afterimage after tween completes
     fadeTween.Completed:Connect(function()
         afterimage:Destroy()
     end)
@@ -57,23 +57,39 @@ end
 -- Function to handle sidestep/backstep
 local function performStep(direction)
     local stepDistance = direction == "back" and backstepDistance or sidestepDistance
+    local cameraCFrame = Camera.CFrame
     local offset = Vector3.new(0, 0, 0)
 
-    -- Determine offset and play animation based on direction
+    -- Calculate the movement direction based on the camera's orientation
     if direction == "left" then
-        offset = humanoidRootPart.CFrame.RightVector * -stepDistance
+        offset = -cameraCFrame.RightVector * stepDistance
+    elseif direction == "right" then
+        offset = cameraCFrame.RightVector * stepDistance
+    elseif direction == "back" then
+        offset = -cameraCFrame.LookVector * stepDistance
+    end
+
+    -- Ensure the movement remains on the horizontal plane by setting Y to 0
+    offset = Vector3.new(offset.X, 0, offset.Z)
+
+    -- Play the corresponding animation
+    if direction == "left" then
         leftStepAnimTrack:Play()
     elseif direction == "right" then
-        offset = humanoidRootPart.CFrame.RightVector * stepDistance
         rightStepAnimTrack:Play()
     elseif direction == "back" then
-        offset = humanoidRootPart.CFrame.LookVector * -stepDistance
         backStepAnimTrack:Play()
     end
 
-    -- Move player instantly and create a single afterimage
+    -- Adjust the CFrame of the humanoidRootPart
+    humanoidRootPart.CFrame = CFrame.new(humanoidRootPart.Position + offset)
+
+    -- Make the player face the camera's forward direction (on the horizontal plane)
+    local lookDirection = Vector3.new(cameraCFrame.LookVector.X, 0, cameraCFrame.LookVector.Z).Unit
+    humanoidRootPart.CFrame = CFrame.lookAt(humanoidRootPart.Position, humanoidRootPart.Position + lookDirection)
+
+    -- Create an afterimage
     createAfterimage()
-    humanoidRootPart.CFrame = humanoidRootPart.CFrame + offset
 
     delay(animsDuration, function() leftStepAnimTrack:Stop() end)
     delay(animsDuration, function() rightStepAnimTrack:Stop() end)
