@@ -1,0 +1,100 @@
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+local sidestepDistance = 15 -- Distance for sidestep
+local backstepDistance = 6 -- Distance for backstep
+local afterimageDuration = 0.9 -- Duration for each afterimage
+local animsDuration = 0.2
+
+-- Animation IDs
+local leftStepAnimationId = "rbxassetid://10480796021"
+local rightStepAnimationId = "rbxassetid://10480793962"
+local backStepAnimationId = "rbxassetid://10471478869"
+
+-- Load animations
+local leftStepAnimation = Instance.new("Animation")
+leftStepAnimation.AnimationId = leftStepAnimationId
+local leftStepAnimTrack = humanoid:LoadAnimation(leftStepAnimation)
+leftStepAnimTrack.TimePosition = 0.2
+
+local rightStepAnimation = Instance.new("Animation")
+rightStepAnimation.AnimationId = rightStepAnimationId
+local rightStepAnimTrack = humanoid:LoadAnimation(rightStepAnimation)
+rightStepAnimTrack.TimePosition = 0.2
+
+local backStepAnimation = Instance.new("Animation")
+backStepAnimation.AnimationId = backStepAnimationId
+local backStepAnimTrack = humanoid:LoadAnimation(backStepAnimation)
+backStepAnimTrack.TimePosition = 0.2
+
+-- Function to create an afterimage
+local function createAfterimage()
+    local afterimage = humanoidRootPart:Clone()
+    afterimage.Transparency = 0.5
+    afterimage.CanCollide = false
+    afterimage.Anchored = true
+    afterimage.Name = "Afterimage"
+    for i, v in pairs(afterimage:GetChildren()) do
+        v:Destroy()
+    end
+    afterimage.Parent = game:GetService("Workspace")
+
+    -- Tween to fade out and remove afterimage
+    local tweenInfo = TweenInfo.new(afterimageDuration, Enum.EasingStyle.Linear)
+    local fadeTween = TweenService:Create(afterimage, tweenInfo, {Transparency = 1})
+    fadeTween:Play()
+
+    -- Cleanup afterimage after tween completes
+    fadeTween.Completed:Connect(function()
+        afterimage:Destroy()
+    end)
+end
+
+-- Function to handle sidestep/backstep
+local function performStep(direction)
+    local stepDistance = direction == "back" and backstepDistance or sidestepDistance
+    local offset = Vector3.new(0, 0, 0)
+
+    -- Determine offset and play animation based on direction
+    if direction == "left" then
+        offset = humanoidRootPart.CFrame.RightVector * -stepDistance
+        leftStepAnimTrack:Play()
+    elseif direction == "right" then
+        offset = humanoidRootPart.CFrame.RightVector * stepDistance
+        rightStepAnimTrack:Play()
+    elseif direction == "back" then
+        offset = humanoidRootPart.CFrame.LookVector * -stepDistance
+        backStepAnimTrack:Play()
+    end
+
+    -- Move player instantly and create a single afterimage
+    createAfterimage()
+    humanoidRootPart.CFrame = humanoidRootPart.CFrame + offset
+
+    delay(animsDuration, function() leftStepAnimTrack:Stop() end)
+    delay(animsDuration, function() rightStepAnimTrack:Stop() end)
+    delay(animsDuration, function() backStepAnimTrack:Stop() end)
+end
+
+-- Keybind detection for sidestep and backstep
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+
+    if input.KeyCode == Enum.KeyCode.E then
+        local leftPressed = UserInputService:IsKeyDown(Enum.KeyCode.A)
+        local rightPressed = UserInputService:IsKeyDown(Enum.KeyCode.D)
+        local backPressed = UserInputService:IsKeyDown(Enum.KeyCode.S)
+
+        if leftPressed then
+            performStep("left")
+        elseif rightPressed then
+            performStep("right")
+        elseif backPressed then
+            performStep("back")
+        end
+    end
+end)
