@@ -1,4 +1,4 @@
----@diagnostic disable: undefined-global
+
 -- local player
 
 local player = game.Players.LocalPlayer
