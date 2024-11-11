@@ -40,43 +40,50 @@ local Abilities = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local AnimLogs_2 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
-local CstmAnims = Instance.new("Frame")
-local UIGridLayout_4 = Instance.new("UIGridLayout")
-local TextButton = Instance.new("TextButton")
+local TSBGcstmanim = Instance.new("ScrollingFrame")
+local Prototype = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
+local UIGridLayout_4 = Instance.new("UIGridLayout")
+local TSBGAbilities = Instance.new("ScrollingFrame")
+local InstSideStep = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local UIGridLayout_5 = Instance.new("UIGridLayout")
+local Ctrlrun = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local KSFOV = Instance.new("Frame")
+local KSFOVMain = Instance.new("Frame")
+local UIGridLayout_6 = Instance.new("UIGridLayout")
+local KSFOVSwordz = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local KSFOVUtilities = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local KSFOVOpenTp = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
 local AnimationLog = Instance.new("Frame")
 local Animations = Instance.new("ScrollingFrame")
 local TrackID = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
-local UIGridLayout_5 = Instance.new("UIGridLayout")
+local UICorner_17 = Instance.new("UICorner")
+local UIGridLayout_7 = Instance.new("UIGridLayout")
 local Run = Instance.new("TextBox")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 local PlayAnims = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local ClearLogs = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_20 = Instance.new("UICorner")
 local Controlsbuttons = Instance.new("Frame")
 local ReturnToMain = Instance.new("ImageButton")
 local Minimize = Instance.new("ImageButton")
-local UIGridLayout_6 = Instance.new("UIGridLayout")
+local UIGridLayout_8 = Instance.new("UIGridLayout")
 local DestroyScreenGui = Instance.new("ImageButton")
 local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
-local KSFOV = Instance.new("Frame")
-local KSFOVMain = Instance.new("Frame")
-local UIGridLayout_7 = Instance.new("UIGridLayout")
-local KSFOVSwordz = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local KSFOVUtilities = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local KSFOVOpenTp = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
 
--- properties
+--Properties:
 
 humanarentbornwiththis.Name = "humanarentbornwiththis"
-humanarentbornwiththis.Parent = player:WaitForChild("PlayerGui")
+humanarentbornwiththis.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 humanarentbornwiththis.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 humanarentbornwiththis.ResetOnSpawn = false
+
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = humanarentbornwiththis
 MainFrame.BackgroundColor3 = Color3.fromRGB(86, 0, 0)
@@ -84,8 +91,10 @@ MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 MainFrame.BorderSizePixel = 0
 MainFrame.Position = UDim2.new(-0.289, 0, 0.160098523, 0)
 MainFrame.Size = UDim2.new(0.288725168, 0, 0.726600945, 0)
+
 UICorner.CornerRadius = UDim.new(0.150000006, 0)
 UICorner.Parent = MainFrame
+
 Main.Name = "Main"
 Main.Parent = MainFrame
 Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -94,7 +103,7 @@ Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.227138638, 0, 0, 0)
 Main.Size = UDim2.new(0.770582736, 0, 1, 0)
-Main.Visible = true
+
 AnimLogs.Name = "AnimLogs"
 AnimLogs.Parent = Main
 AnimLogs.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -109,14 +118,17 @@ AnimLogs.TextColor3 = Color3.fromRGB(0, 0, 0)
 AnimLogs.TextScaled = true
 AnimLogs.TextSize = 14.000
 AnimLogs.TextWrapped = true
+
 UICorner_2.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_2.Parent = AnimLogs
+
 UIGridLayout.Parent = Main
 UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout.VerticalAlignment = Enum.VerticalAlignment.Center
 UIGridLayout.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
 UIGridLayout.CellSize = UDim2.new(0.899999976, 0, 0.174999997, 0)
+
 gamapickr.Name = "gamapickr"
 gamapickr.Parent = Main
 gamapickr.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -130,8 +142,10 @@ gamapickr.TextColor3 = Color3.fromRGB(0, 0, 0)
 gamapickr.TextScaled = true
 gamapickr.TextSize = 14.000
 gamapickr.TextWrapped = true
+
 UICorner_3.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_3.Parent = gamapickr
+
 gammacaospickr.Name = "gammacaospickr"
 gammacaospickr.Parent = MainFrame
 gammacaospickr.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -141,12 +155,14 @@ gammacaospickr.BorderSizePixel = 0
 gammacaospickr.Position = UDim2.new(0.227138638, 0, 0, 0)
 gammacaospickr.Size = UDim2.new(0.770582736, 0, 1, 0)
 gammacaospickr.Visible = false
+
 UIGridLayout_2.Parent = gammacaospickr
 UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
 UIGridLayout_2.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
 UIGridLayout_2.CellSize = UDim2.new(0.899999976, 0, 0.174999997, 0)
+
 OpenTSBGframe.Name = "OpenTSBGframe"
 OpenTSBGframe.Parent = gammacaospickr
 OpenTSBGframe.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -154,15 +170,17 @@ OpenTSBGframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
 OpenTSBGframe.BorderSizePixel = 0
 OpenTSBGframe.LayoutOrder = 2
 OpenTSBGframe.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
-OpenTSBGframe.Size = UDim2.new(0.771, 0, 0.174999997, 0)
+OpenTSBGframe.Size = UDim2.new(0.771000028, 0, 0.174999997, 0)
 OpenTSBGframe.Font = Enum.Font.SourceSans
 OpenTSBGframe.Text = "The Strongest battleground"
 OpenTSBGframe.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenTSBGframe.TextScaled = true
 OpenTSBGframe.TextSize = 14.000
 OpenTSBGframe.TextWrapped = true
+
 UICorner_4.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_4.Parent = OpenTSBGframe
+
 OpenKSFOVframe.Name = "OpenKSFOVframe"
 OpenKSFOVframe.Parent = gammacaospickr
 OpenKSFOVframe.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -177,11 +195,14 @@ OpenKSFOVframe.TextColor3 = Color3.fromRGB(0, 0, 0)
 OpenKSFOVframe.TextScaled = true
 OpenKSFOVframe.TextSize = 14.000
 OpenKSFOVframe.TextWrapped = true
+
 UICorner_5.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_5.Parent = OpenKSFOVframe
+
 UIAspectRatioConstraint.Parent = MainFrame
 UIAspectRatioConstraint.AspectRatio = 0.952
 UIAspectRatioConstraint.DominantAxis = Enum.DominantAxis.Height
+
 TSBG.Name = "TSBG"
 TSBG.Parent = MainFrame
 TSBG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -189,94 +210,25 @@ TSBG.BackgroundTransparency = 1.000
 TSBG.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TSBG.BorderSizePixel = 0
 TSBG.Position = UDim2.new(0.227138638, 0, 0, 0)
-TSBG.Size = UDim2.new(0.771, 0, 1, 0)
+TSBG.Size = UDim2.new(0.771000028, 0, 1, 0)
 TSBG.Visible = false
-KSFOV.Name = "KSFOV"
-KSFOV.Parent = MainFrame
-KSFOV.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KSFOV.BackgroundTransparency = 1.000
-KSFOV.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KSFOV.BorderSizePixel = 0
-KSFOV.Position = UDim2.new(0.226999998, 0, 0, 0)
-KSFOV.Size = UDim2.new(0.771000028, 0, 1, 0)
-KSFOV.Visible = false
-KSFOVMain.Name = "KSFOVMain"
-KSFOVMain.Parent = KSFOV
-KSFOVMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-KSFOVMain.BackgroundTransparency = 1.000
-KSFOVMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVMain.BorderSizePixel = 0
-KSFOVMain.Position = UDim2.new(-0.00192054012, 0, 0, 0)
-KSFOVMain.Size = UDim2.new(0.999920607, 0, 1, 0)
-KSFOVMain.Visible = false
-UIGridLayout_7.Parent = KSFOVMain
-UIGridLayout_7.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIGridLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_7.VerticalAlignment = Enum.VerticalAlignment.Center
-UIGridLayout_7.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
-UIGridLayout_7.CellSize = UDim2.new(0.899999976, 0, 0.174999997, 0)
-KSFOVSwordz.Name = "KSFOVSwordz"
-KSFOVSwordz.Parent = KSFOVMain
-KSFOVSwordz.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
-KSFOVSwordz.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVSwordz.BorderSizePixel = 0
-KSFOVSwordz.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
-KSFOVSwordz.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
-KSFOVSwordz.Font = Enum.Font.SourceSans
-KSFOVSwordz.Text = "Sword Picker"
-KSFOVSwordz.TextColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVSwordz.TextScaled = true
-KSFOVSwordz.TextSize = 14.000
-KSFOVSwordz.TextWrapped = true
-UICorner_15.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_15.Parent = KSFOVSwordz
-KSFOVUtilities.Name = "KSFOVUtilities"
-KSFOVUtilities.Parent = KSFOVMain
-KSFOVUtilities.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
-KSFOVUtilities.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVUtilities.BorderSizePixel = 0
-KSFOVUtilities.LayoutOrder = 2
-KSFOVUtilities.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
-KSFOVUtilities.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
-KSFOVUtilities.Font = Enum.Font.SourceSans
-KSFOVUtilities.Text = "KSFOVUtilities (W.I.P)"
-KSFOVUtilities.TextColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVUtilities.TextScaled = true
-KSFOVUtilities.TextSize = 14.000
-KSFOVUtilities.TextWrapped = true
-UICorner_16.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_16.Parent = KSFOVUtilities
-KSFOVOpenTp.Name = "KSFOVOpenTp"
-KSFOVOpenTp.Parent = KSFOVMain
-KSFOVOpenTp.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
-KSFOVOpenTp.BorderColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVOpenTp.BorderSizePixel = 0
-KSFOVOpenTp.LayoutOrder = 1
-KSFOVOpenTp.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
-KSFOVOpenTp.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
-KSFOVOpenTp.Font = Enum.Font.SourceSans
-KSFOVOpenTp.Text = "Teleport to Swords"
-KSFOVOpenTp.TextColor3 = Color3.fromRGB(0, 0, 0)
-KSFOVOpenTp.TextScaled = true
-KSFOVOpenTp.TextSize = 14.000
-KSFOVOpenTp.TextWrapped = true
-UICorner_17.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_17.Parent = KSFOVOpenTp
+
 TSBGMain.Name = "TSBGMain"
 TSBGMain.Parent = TSBG
 TSBGMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TSBGMain.BackgroundTransparency = 1.000
 TSBGMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TSBGMain.BorderSizePixel = 0
-TSBGMain.Position = UDim2.new(0, 0, 0, 0)
 TSBGMain.Size = UDim2.new(1, 0, 1, 0)
-TSBGMain.Visible = false
+TSBGMain.Visible = true
+
 UIGridLayout_3.Parent = TSBGMain
 UIGridLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIGridLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
 UIGridLayout_3.VerticalAlignment = Enum.VerticalAlignment.Center
 UIGridLayout_3.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
 UIGridLayout_3.CellSize = UDim2.new(0.899999976, 0, 0.174999997, 0)
+
 CustomAnims.Name = "CustomAnims"
 CustomAnims.Parent = TSBGMain
 CustomAnims.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -291,8 +243,10 @@ CustomAnims.TextColor3 = Color3.fromRGB(0, 0, 0)
 CustomAnims.TextScaled = true
 CustomAnims.TextSize = 14.000
 CustomAnims.TextWrapped = true
+
 UICorner_6.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_6.Parent = CustomAnims
+
 Utilities.Name = "Utilities"
 Utilities.Parent = TSBGMain
 Utilities.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -307,8 +261,10 @@ Utilities.TextColor3 = Color3.fromRGB(0, 0, 0)
 Utilities.TextScaled = true
 Utilities.TextSize = 14.000
 Utilities.TextWrapped = true
+
 UICorner_7.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_7.Parent = Utilities
+
 Abilities.Name = "Abilities"
 Abilities.Parent = TSBGMain
 Abilities.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -323,8 +279,10 @@ Abilities.TextColor3 = Color3.fromRGB(0, 0, 0)
 Abilities.TextScaled = true
 Abilities.TextSize = 14.000
 Abilities.TextWrapped = true
+
 UICorner_8.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_8.Parent = Abilities
+
 AnimLogs_2.Name = "AnimLogs"
 AnimLogs_2.Parent = TSBGMain
 AnimLogs_2.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
@@ -339,36 +297,171 @@ AnimLogs_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 AnimLogs_2.TextScaled = true
 AnimLogs_2.TextSize = 14.000
 AnimLogs_2.TextWrapped = true
+
 UICorner_9.CornerRadius = UDim.new(0.300000012, 0)
 UICorner_9.Parent = AnimLogs_2
-CstmAnims.Name = "CstmAnims"
-CstmAnims.Parent = TSBG
-CstmAnims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CstmAnims.BackgroundTransparency = 1.000
-CstmAnims.BorderColor3 = Color3.fromRGB(0, 0, 0)
-CstmAnims.BorderSizePixel = 0
-CstmAnims.Position = UDim2.new(0, 0, 0, 0)
-CstmAnims.Size = UDim2.new(1, 0, 1, 0)
-CstmAnims.Visible = false
-UIGridLayout_4.Parent = CstmAnims
+
+TSBGcstmanim.Name = "TSBGcstmanim"
+TSBGcstmanim.Parent = TSBG
+TSBGcstmanim.Active = true
+TSBGcstmanim.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TSBGcstmanim.BackgroundTransparency = 1.000
+TSBGcstmanim.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TSBGcstmanim.BorderSizePixel = 0
+TSBGcstmanim.Position = UDim2.new(-0.00200000009, 0, 0.023, 0)
+TSBGcstmanim.Size = UDim2.new(1, 0, 0.958000004, 0)
+TSBGcstmanim.Visible = false
+TSBGcstmanim.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+Prototype.Name = "Prototype"
+Prototype.Parent = TSBGcstmanim
+Prototype.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+Prototype.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Prototype.BorderSizePixel = 0
+Prototype.Size = UDim2.new(0, 200, 0, 50)
+Prototype.Font = Enum.Font.SourceSans
+Prototype.Text = "Prototype"
+Prototype.TextColor3 = Color3.fromRGB(0, 0, 0)
+Prototype.TextScaled = true
+Prototype.TextSize = 14.000
+Prototype.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_10.Parent = Prototype
+
+UIGridLayout_4.Parent = TSBGcstmanim
 UIGridLayout_4.HorizontalAlignment = Enum.HorizontalAlignment.Center
 UIGridLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_4.VerticalAlignment = Enum.VerticalAlignment.Center
 UIGridLayout_4.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
-UIGridLayout_4.CellSize = UDim2.new(0.899999976, 0, 0.174999997, 0)
-TextButton.Parent = CstmAnims
-TextButton.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Prototype"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-UICorner_10.CornerRadius = UDim.new(0.300000012, 0)
-UICorner_10.Parent = TextButton
+UIGridLayout_4.CellSize = UDim2.new(0.899999976, 0, 0.135000005, 0)
+
+TSBGAbilities.Name = "TSBGAbilities"
+TSBGAbilities.Parent = TSBG
+TSBGAbilities.Active = true
+TSBGAbilities.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TSBGAbilities.BackgroundTransparency = 1.000
+TSBGAbilities.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TSBGAbilities.BorderSizePixel = 0
+TSBGAbilities.Position = UDim2.new(-0.00200000009, 0, 0.023, 0)
+TSBGAbilities.Size = UDim2.new(1, 0, 0.958000004, 0)
+TSBGAbilities.Visible = false
+TSBGAbilities.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+InstSideStep.Name = "InstSideStep"
+InstSideStep.Parent = TSBGAbilities
+InstSideStep.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+InstSideStep.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InstSideStep.BorderSizePixel = 0
+InstSideStep.Size = UDim2.new(0, 200, 0, 50)
+InstSideStep.Font = Enum.Font.SourceSans
+InstSideStep.Text = "Inst SideStep (e)"
+InstSideStep.TextColor3 = Color3.fromRGB(0, 0, 0)
+InstSideStep.TextScaled = true
+InstSideStep.TextSize = 14.000
+InstSideStep.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_11.Parent = InstSideStep
+
+UIGridLayout_5.Parent = TSBGAbilities
+UIGridLayout_5.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_5.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
+UIGridLayout_5.CellSize = UDim2.new(0.899999976, 0, 0.135000005, 0)
+
+Ctrlrun.Name = "Ctrlrun"
+Ctrlrun.Parent = TSBGAbilities
+Ctrlrun.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+Ctrlrun.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Ctrlrun.BorderSizePixel = 0
+Ctrlrun.Size = UDim2.new(0, 200, 0, 50)
+Ctrlrun.Font = Enum.Font.SourceSans
+Ctrlrun.Text = "Ctrl Run"
+Ctrlrun.TextColor3 = Color3.fromRGB(0, 0, 0)
+Ctrlrun.TextScaled = true
+Ctrlrun.TextSize = 14.000
+Ctrlrun.TextWrapped = true
+
+KSFOV.Name = "KSFOV"
+KSFOV.Parent = MainFrame
+KSFOV.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KSFOV.BackgroundTransparency = 1.000
+KSFOV.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KSFOV.BorderSizePixel = 0
+KSFOV.Position = UDim2.new(0.226999998, 0, 0, 0)
+KSFOV.Size = UDim2.new(0.771000028, 0, 1, 0)
+KSFOV.Visible = false
+
+KSFOVMain.Name = "KSFOVMain"
+KSFOVMain.Parent = KSFOV
+KSFOVMain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KSFOVMain.BackgroundTransparency = 1.000
+KSFOVMain.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVMain.BorderSizePixel = 0
+KSFOVMain.Position = UDim2.new(-0.00192054012, 0, 0, 0)
+KSFOVMain.Size = UDim2.new(0.999920607, 0, 1, 0)
+KSFOVMain.Visible = false
+
+UIGridLayout_6.Parent = KSFOVMain
+UIGridLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_6.VerticalAlignment = Enum.VerticalAlignment.Center
+UIGridLayout_6.CellPadding = UDim2.new(0, 0, 0.0299999993, 0)
+UIGridLayout_6.CellSize = UDim2.new(0.899999976, 0, 0.174999997, 0)
+
+KSFOVSwordz.Name = "KSFOVSwordz"
+KSFOVSwordz.Parent = KSFOVMain
+KSFOVSwordz.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+KSFOVSwordz.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVSwordz.BorderSizePixel = 0
+KSFOVSwordz.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+KSFOVSwordz.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
+KSFOVSwordz.Font = Enum.Font.SourceSans
+KSFOVSwordz.Text = "Sword Picker"
+KSFOVSwordz.TextColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVSwordz.TextScaled = true
+KSFOVSwordz.TextSize = 14.000
+KSFOVSwordz.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_14.Parent = KSFOVSwordz
+
+KSFOVUtilities.Name = "KSFOVUtilities"
+KSFOVUtilities.Parent = KSFOVMain
+KSFOVUtilities.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+KSFOVUtilities.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVUtilities.BorderSizePixel = 0
+KSFOVUtilities.LayoutOrder = 2
+KSFOVUtilities.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+KSFOVUtilities.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
+KSFOVUtilities.Font = Enum.Font.SourceSans
+KSFOVUtilities.Text = "KSFOVUtilities (W.I.P)"
+KSFOVUtilities.TextColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVUtilities.TextScaled = true
+KSFOVUtilities.TextSize = 14.000
+KSFOVUtilities.TextWrapped = true
+
+UICorner_15.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_15.Parent = KSFOVUtilities
+
+KSFOVOpenTp.Name = "KSFOVOpenTp"
+KSFOVOpenTp.Parent = KSFOVMain
+KSFOVOpenTp.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+KSFOVOpenTp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVOpenTp.BorderSizePixel = 0
+KSFOVOpenTp.LayoutOrder = 1
+KSFOVOpenTp.Position = UDim2.new(0.303834796, 0, 0.0590000004, 0)
+KSFOVOpenTp.Size = UDim2.new(0.899999976, 0, 0.174999997, 0)
+KSFOVOpenTp.Font = Enum.Font.SourceSans
+KSFOVOpenTp.Text = "Teleport to Swords"
+KSFOVOpenTp.TextColor3 = Color3.fromRGB(0, 0, 0)
+KSFOVOpenTp.TextScaled = true
+KSFOVOpenTp.TextSize = 14.000
+KSFOVOpenTp.TextWrapped = true
+
+UICorner_16.CornerRadius = UDim.new(0.300000012, 0)
+UICorner_16.Parent = KSFOVOpenTp
+
 AnimationLog.Name = "AnimationLog"
 AnimationLog.Parent = MainFrame
 AnimationLog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -378,6 +471,7 @@ AnimationLog.BorderSizePixel = 0
 AnimationLog.Position = UDim2.new(0.227138638, 0, 0, 0)
 AnimationLog.Size = UDim2.new(0.770582736, 0, 1, 0)
 AnimationLog.Visible = false
+
 Animations.Name = "Animations"
 Animations.Parent = AnimationLog
 Animations.Active = true
@@ -386,6 +480,7 @@ Animations.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Animations.BorderSizePixel = 0
 Animations.Position = UDim2.new(0.0861299559, 0, 0.0762711838, 0)
 Animations.Size = UDim2.new(0.826865435, 0, 0.564971745, 0)
+
 TrackID.Name = "TrackID"
 TrackID.Parent = Animations
 TrackID.BackgroundColor3 = Color3.fromRGB(12, 124, 209)
@@ -399,11 +494,14 @@ TrackID.TextColor3 = Color3.fromRGB(0, 0, 0)
 TrackID.TextScaled = true
 TrackID.TextSize = 10.000
 TrackID.TextWrapped = true
-UICorner_11.CornerRadius = UDim.new(0.0500000007, 0)
-UICorner_11.Parent = TrackID
-UIGridLayout_5.Parent = Animations
-UIGridLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_5.CellSize = UDim2.new(0, 200, 0, 50)
+
+UICorner_17.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_17.Parent = TrackID
+
+UIGridLayout_7.Parent = Animations
+UIGridLayout_7.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_7.CellSize = UDim2.new(1, 0, 0, 50)
+
 Run.Name = "Run"
 Run.Parent = AnimationLog
 Run.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -419,8 +517,10 @@ Run.TextColor3 = Color3.fromRGB(0, 0, 0)
 Run.TextScaled = true
 Run.TextSize = 14.000
 Run.TextWrapped = true
-UICorner_12.CornerRadius = UDim.new(0.0799999982, 0)
-UICorner_12.Parent = Run
+
+UICorner_18.CornerRadius = UDim.new(0.0799999982, 0)
+UICorner_18.Parent = Run
+
 PlayAnims.Name = "PlayAnims"
 PlayAnims.Parent = AnimationLog
 PlayAnims.BackgroundColor3 = Color3.fromRGB(119, 255, 34)
@@ -434,8 +534,10 @@ PlayAnims.TextColor3 = Color3.fromRGB(0, 0, 0)
 PlayAnims.TextScaled = true
 PlayAnims.TextSize = 14.000
 PlayAnims.TextWrapped = true
-UICorner_13.CornerRadius = UDim.new(0.0799999982, 0)
-UICorner_13.Parent = PlayAnims
+
+UICorner_19.CornerRadius = UDim.new(0.0799999982, 0)
+UICorner_19.Parent = PlayAnims
+
 ClearLogs.Name = "ClearLogs"
 ClearLogs.Parent = AnimationLog
 ClearLogs.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
@@ -449,16 +551,19 @@ ClearLogs.TextColor3 = Color3.fromRGB(0, 0, 0)
 ClearLogs.TextScaled = true
 ClearLogs.TextSize = 14.000
 ClearLogs.TextWrapped = true
-UICorner_14.CornerRadius = UDim.new(0.0799999982, 0)
-UICorner_14.Parent = ClearLogs
+
+UICorner_20.CornerRadius = UDim.new(0.0799999982, 0)
+UICorner_20.Parent = ClearLogs
+
 Controlsbuttons.Name = "Controlsbuttons"
 Controlsbuttons.Parent = humanarentbornwiththis
 Controlsbuttons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Controlsbuttons.BackgroundTransparency = 1.000
 Controlsbuttons.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Controlsbuttons.BorderSizePixel = 0
-Controlsbuttons.Position = UDim2.new(-0.1, 0, 0.110837437, 0)
+Controlsbuttons.Position = UDim2.new(0.132796437, 0, 0.110837437, 0)
 Controlsbuttons.Size = UDim2.new(0.0916723832, 0, 0.0513136238, 0)
+
 ReturnToMain.Name = "ReturnToMain"
 ReturnToMain.Parent = Controlsbuttons
 ReturnToMain.BackgroundTransparency = 0.800
@@ -469,6 +574,7 @@ ReturnToMain.ZIndex = 2
 ReturnToMain.Image = "rbxassetid://3926305904"
 ReturnToMain.ImageRectOffset = Vector2.new(164, 284)
 ReturnToMain.ImageRectSize = Vector2.new(36, 36)
+
 Minimize.Name = "Minimize"
 Minimize.Parent = Controlsbuttons
 Minimize.BackgroundTransparency = 0.800
@@ -479,12 +585,14 @@ Minimize.ZIndex = 2
 Minimize.Image = "rbxassetid://3926305904"
 Minimize.ImageRectOffset = Vector2.new(124, 924)
 Minimize.ImageRectSize = Vector2.new(36, 36)
-UIGridLayout_6.Parent = Controlsbuttons
-UIGridLayout_6.HorizontalAlignment = Enum.HorizontalAlignment.Right
-UIGridLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_6.CellPadding = UDim2.new(0, 1, 0, 0)
-UIGridLayout_6.CellSize = UDim2.new(0.25, 0, 1, 0)
-UIGridLayout_6.StartCorner = Enum.StartCorner.TopRight
+
+UIGridLayout_8.Parent = Controlsbuttons
+UIGridLayout_8.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIGridLayout_8.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_8.CellPadding = UDim2.new(0, 1, 0, 0)
+UIGridLayout_8.CellSize = UDim2.new(0.25, 0, 1, 0)
+UIGridLayout_8.StartCorner = Enum.StartCorner.TopRight
+
 DestroyScreenGui.Name = "DestroyScreenGui"
 DestroyScreenGui.Parent = Controlsbuttons
 DestroyScreenGui.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -497,6 +605,7 @@ DestroyScreenGui.Image = "rbxassetid://3926305904"
 DestroyScreenGui.ImageColor3 = Color3.fromRGB(255, 0, 0)
 DestroyScreenGui.ImageRectOffset = Vector2.new(924, 724)
 DestroyScreenGui.ImageRectSize = Vector2.new(36, 36)
+
 UIAspectRatioConstraint_2.Parent = Controlsbuttons
 UIAspectRatioConstraint_2.AspectRatio = 4.280
 UIAspectRatioConstraint_2.DominantAxis = Enum.DominantAxis.Height
@@ -532,7 +641,6 @@ local Gui = {
 	cCS = Instance.new("TextButton"),
 	UICorner_11 = Instance.new("UICorner"),
 	cBlackhole = Instance.new("TextButton"),
-	UICorner_12 = Instance.new("UICorner"),
 	cLobotomy = Instance.new("TextButton"),
 	UICorner_13 = Instance.new("UICorner"),
 	cDIV = Instance.new("TextButton"),
@@ -3831,7 +3939,7 @@ local currentAnimationTrack
 
 -- anim logger function
 
-local function adjustCanvasSize()
+local function adjustAnimLogCanvasSize()
 	local numLogs = #Animations:GetChildren() * 3
 	local newCanvasSizeY = math.max(numLogs * UIGridLayout.CellSize.Y.Offset, Animations.AbsoluteSize.Y)
 	Animations.CanvasSize = UDim2.new(0, 0, 0, newCanvasSizeY + 10)
@@ -3844,7 +3952,7 @@ local function createTrackID(animationId)
 		trackIDButton.Text = name
 		trackIDButton.Parent = Animations
 		trackIDButton.Visible = true
-		adjustCanvasSize()
+		adjustAnimLogCanvasSize()
 		trackIDButton.MouseButton1Click:Connect(function()
 			setclipboard(idNumber)
 		end)
@@ -3936,8 +4044,11 @@ Minimize.MouseButton1Click:Connect(function()
 end)
 ReturnToMain.MouseButton1Click:Connect(function()
 	Main.Visible = true
+	gammacaospickr.Visible = false
 	AnimationLog.Visible = false
 	TSBG.Visible = false
+	TSBGcstmanim.Visible = false
+	TSBGAbilities.Visible = false
 	KSFOV.Visible = false
 	Gui.KSFOVSwordden.Visible = false
 	Gui.KSFOVBdgSwords.Visible = false
@@ -3975,6 +4086,23 @@ OpenTSBGframe.MouseButton1Click:Connect(function()
 	gammacaospickr.Visible = false
 	TSBG.Visible = true
 	TSBGMain.Visible = true
+end)
+Abilities.MouseButton1Click:Connect(function()
+	TSBGMain.Visible = false
+	TSBGAbilities.Visible = true
+end)
+CustomAnims.MouseButton1Click:Connect(function()
+	TSBGMain.Visible = false
+	TSBGcstmanim.Visible = true
+end)
+Prototype.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/yourfriend113/secret/anim/prototype"))()
+end)
+Ctrlrun.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/yourfriend113/secret/Ability/Run"))()
+end)
+InstSideStep.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/yourfriend113/secret/Ability/instant%20sidestep"))()
 end)
 
 -- Ksfov buttons
@@ -4087,115 +4215,115 @@ if game.PlaceId == 17033012939 then
 		{button = Gui.RID, part = game:GetService("Workspace"):FindFirstChild("Tp67")},
 	}
 	local pickerData = {
-			{button = Gui.cKillstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[29].Giver},
-			{button = Gui.bdgReaper, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[14].Giver},
-			{button = Gui.bdgDazzling, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[27].Giver},
-			{button = Gui.cGlitch, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[25].Giver},
-			{button = Gui.cERroR, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[61].Giver},
-			{button = Gui.bdgOverheat, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[8].Giver},
-			{button = Gui.bdgAntimatter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[11].Giver},
-			{button = Gui.bdgTrihampter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[35].Giver},
-			{button = Gui.gpAmogus, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[21].Giver},
-			{button = Gui.bdgCultivator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[38].Giver},
-			{button = Gui.bdgRupture, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[13].Giver},
-			{button = Gui.bdgHampter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[7].Giver},
-			{button = Gui.bdgRadioactive, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[17].Giver},
-			{button = Gui.bdgGodly, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[12].Giver},
-			{button = Gui.secretCaseoh, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[39].Giver},
-			{button = Gui.bdgEquinox, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[9].Giver},
-			{button = Gui.bdgFish, part = game:GetService("Workspace").Lobby.ItemGivers.ItemGiver.Giver},
-			{button = Gui.bdgOpFish, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[32].Giver},
-			{button = Gui.bdgVoidFish, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[26].Giver},
-			{button = Gui.gpMoneystreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[10].Giver},
-			{button = Gui.cLobotomy, part = game:GetService("Workspace").ItemGiver.Giver},
-			{button = Gui.bdgLuminary, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[36].Giver},
-			{button = Gui.secretOpTiem, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[23].Giver},
-			{button = Gui.bdgTrojan, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[22].Giver},
-			{button = Gui.bdgInfinity, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[3].Giver},
-			{button = Gui.bdgCelebration, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[5].Giver},
-			{button = Gui.cFrozen, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[41].Giver},
-			-- {button = Gui.cMaxdesignpro, part = game:GetService("Workspace"):GetChildren()[30].Giver},
-			-- {button = Gui.cJimmypro, part = game:GetService("Workspace"):GetChildren()[129].Giver},
-			{button = Gui.cGlass, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[2].Giver},
-			{button = Gui.cTiem, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[4].Giver},
-			-- {button = Gui.bdgRAD, part = game:GetService("Workspace"):GetChildren()[28].Giver},
-			{button = Gui.cBlackhole, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[37].Giver},
-			-- {button = Gui.secretLobotomypuredestruction, part = game:GetService("Workspace"):GetChildren()[57].Giver},
-			-- {button = Gui.cRMP, part = game:GetService("Workspace"):GetChildren()[55].Giver},
-			{button = Gui.gpObliterator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[42].Giver},
-			-- {button = Gui.bdgRWE, part = game:GetService("Workspace"):GetChildren()[58].Giver},
-			{button = Gui.cGrinder, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[33].Giver},
-			{button = Gui.cHugeks, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[34].Giver},
-			{button = Gui.bdgRng, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[15].Giver},
-			-- {button = Gui.cOmmetaphobia, part = game:GetService("Workspace"):GetChildren()[32].Giver},
-			{button = Gui.cCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[31].Giver},
-			{button = Gui.bdgSolar, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[20].Giver},
-			{button = Gui.cExtended, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[16].Giver},
-			{button = Gui.bdgGoldenCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[40].Giver},
-			-- {button = Gui.bdgSupercelebration, part = game:GetService("Workspace"):GetChildren()[56].Giver},
-			-- {button = Gui.bdgDEX, part = game:GetService("Workspace"):GetChildren()[53].Giver},
-			{button = Gui.bdgRID, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[30].Giver},
-			{button = Gui.cOpks, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[18].Giver},
-			-- {button = Gui.gpInsanity, part = game:GetService("Workspace"):GetChildren()[27].Giver},
-			{button = Gui.bdgOceanic, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[24].Giver},
-			{button = Gui.bdgNoobstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[28].Giver},
-			-- {button = Gui.bdgParadox, part = game:GetService("Workspace"):GetChildren()[97].Giver},
-			-- {button = Gui.cObserver, part = game:GetService("Workspace"):GetChildren()[38].Giver},
-			{button = Gui.bdgInfiniplex, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[52].Giver},
-			{button = Gui.cTitanium, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[50].Giver},
-			{button = Gui.cTrueStreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[49].Giver},
-			{button = Gui.cElectro, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[48].Giver},
-			{button = Gui.cKilstek, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[47].Giver},
-			{button = Gui.bdgVoidCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[46].Giver},
-			{button = Gui.bdgSadReaper, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[45].Giver},
-			{button = Gui.gpDefender, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[44].Giver},
-			{button = Gui.bdgRUWU, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[43].Giver},
-			{button = Gui.bdgTimeGod, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[56].Giver},
-			{button = Gui.cWawa, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[65].Giver},
-			{button = Gui.bdgAbyss, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[64].Giver},
-			-- {button = Gui.gpIncinerator, part = game:GetService("Workspace"):GetChildren()[100].Giver},
-			{button = Gui.bdgPrima, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[51].Giver},
-			{button = Gui.cGrinderx, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[57].Giver},
-			{button = Gui.bdgOmniversal, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[63].Giver},
-			{button = Gui.bdgTruekillstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[60].Giver},
-			{button = Gui.cHyperbola, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[58].Giver},
-			{button = Gui.cAbsolute, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[55].Giver},
-			{button = Gui.bdgAquamarineCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[54].Giver},
-			{button = Gui.bdgTruecultivator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[59].Giver},
-		}
-	
+		{button = Gui.cKillstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[29].Giver},
+		{button = Gui.bdgReaper, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[14].Giver},
+		{button = Gui.bdgDazzling, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[27].Giver},
+		{button = Gui.cGlitch, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[25].Giver},
+		{button = Gui.cERroR, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[61].Giver},
+		{button = Gui.bdgOverheat, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[8].Giver},
+		{button = Gui.bdgAntimatter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[11].Giver},
+		{button = Gui.bdgTrihampter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[35].Giver},
+		{button = Gui.gpAmogus, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[21].Giver},
+		{button = Gui.bdgCultivator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[38].Giver},
+		{button = Gui.bdgRupture, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[13].Giver},
+		{button = Gui.bdgHampter, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[7].Giver},
+		{button = Gui.bdgRadioactive, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[17].Giver},
+		{button = Gui.bdgGodly, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[12].Giver},
+		{button = Gui.secretCaseoh, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[39].Giver},
+		{button = Gui.bdgEquinox, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[9].Giver},
+		{button = Gui.bdgFish, part = game:GetService("Workspace").Lobby.ItemGivers.ItemGiver.Giver},
+		{button = Gui.bdgOpFish, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[32].Giver},
+		{button = Gui.bdgVoidFish, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[26].Giver},
+		{button = Gui.gpMoneystreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[10].Giver},
+		{button = Gui.cLobotomy, part = game:GetService("Workspace").ItemGiver.Giver},
+		{button = Gui.bdgLuminary, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[36].Giver},
+		{button = Gui.secretOpTiem, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[23].Giver},
+		{button = Gui.bdgTrojan, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[22].Giver},
+		{button = Gui.bdgInfinity, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[3].Giver},
+		{button = Gui.bdgCelebration, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[5].Giver},
+		{button = Gui.cFrozen, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[41].Giver},
+		-- {button = Gui.cMaxdesignpro, part = game:GetService("Workspace"):GetChildren()[30].Giver},
+		-- {button = Gui.cJimmypro, part = game:GetService("Workspace"):GetChildren()[129].Giver},
+		{button = Gui.cGlass, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[2].Giver},
+		{button = Gui.cTiem, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[4].Giver},
+		-- {button = Gui.bdgRAD, part = game:GetService("Workspace"):GetChildren()[28].Giver},
+		{button = Gui.cBlackhole, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[37].Giver},
+		-- {button = Gui.secretLobotomypuredestruction, part = game:GetService("Workspace"):GetChildren()[57].Giver},
+		-- {button = Gui.cRMP, part = game:GetService("Workspace"):GetChildren()[55].Giver},
+		{button = Gui.gpObliterator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[42].Giver},
+		-- {button = Gui.bdgRWE, part = game:GetService("Workspace"):GetChildren()[58].Giver},
+		{button = Gui.cGrinder, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[33].Giver},
+		{button = Gui.cHugeks, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[34].Giver},
+		{button = Gui.bdgRng, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[15].Giver},
+		-- {button = Gui.cOmmetaphobia, part = game:GetService("Workspace"):GetChildren()[32].Giver},
+		{button = Gui.cCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[31].Giver},
+		{button = Gui.bdgSolar, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[20].Giver},
+		{button = Gui.cExtended, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[16].Giver},
+		{button = Gui.bdgGoldenCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[40].Giver},
+		-- {button = Gui.bdgSupercelebration, part = game:GetService("Workspace"):GetChildren()[56].Giver},
+		-- {button = Gui.bdgDEX, part = game:GetService("Workspace"):GetChildren()[53].Giver},
+		{button = Gui.bdgRID, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[30].Giver},
+		{button = Gui.cOpks, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[18].Giver},
+		-- {button = Gui.gpInsanity, part = game:GetService("Workspace"):GetChildren()[27].Giver},
+		{button = Gui.bdgOceanic, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[24].Giver},
+		{button = Gui.bdgNoobstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[28].Giver},
+		-- {button = Gui.bdgParadox, part = game:GetService("Workspace"):GetChildren()[97].Giver},
+		-- {button = Gui.cObserver, part = game:GetService("Workspace"):GetChildren()[38].Giver},
+		{button = Gui.bdgInfiniplex, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[52].Giver},
+		{button = Gui.cTitanium, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[50].Giver},
+		{button = Gui.cTrueStreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[49].Giver},
+		{button = Gui.cElectro, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[48].Giver},
+		{button = Gui.cKilstek, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[47].Giver},
+		{button = Gui.bdgVoidCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[46].Giver},
+		{button = Gui.bdgSadReaper, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[45].Giver},
+		{button = Gui.gpDefender, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[44].Giver},
+		{button = Gui.bdgRUWU, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[43].Giver},
+		{button = Gui.bdgTimeGod, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[56].Giver},
+		{button = Gui.cWawa, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[65].Giver},
+		{button = Gui.bdgAbyss, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[64].Giver},
+		-- {button = Gui.gpIncinerator, part = game:GetService("Workspace"):GetChildren()[100].Giver},
+		{button = Gui.bdgPrima, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[51].Giver},
+		{button = Gui.cGrinderx, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[57].Giver},
+		{button = Gui.bdgOmniversal, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[63].Giver},
+		{button = Gui.bdgTruekillstreak, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[60].Giver},
+		{button = Gui.cHyperbola, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[58].Giver},
+		{button = Gui.cAbsolute, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[55].Giver},
+		{button = Gui.bdgAquamarineCS, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[54].Giver},
+		{button = Gui.bdgTruecultivator, part = game:GetService("Workspace").Lobby.ItemGivers:GetChildren()[59].Giver},
+	}
+
 	local function KSFOVcreatetpsfunction(button, tppart)
-	    if button and tppart then
-	        button.MouseButton1Click:Connect(function()
-	            local humanoidRootPart = player.Character:FindFirstChild('HumanoidRootPart')
-	            if humanoidRootPart and tppart:IsA("BasePart") then -- Check if HumanoidRootPart exists and tppart is a valid part
-	                humanoidRootPart.CFrame = tppart.CFrame
-	            else
-	                warn("Teleport failed: Missing or invalid part")
-	            end
-	        end)
-	    end
-	end
-	
-	local function KSFOVcreatepickerfunction(button, part)
-	    if button and part then
-	        button.MouseButton1Click:Connect(function()
-	            local humanoidRootPart = player.Character:FindFirstChild('HumanoidRootPart')
-	            if humanoidRootPart and part:IsA("BasePart") then -- Check if HumanoidRootPart exists and part is valid
-	                firetouchinterest(humanoidRootPart, part, 0)
-	            else
-	                warn("Picker failed: Missing or invalid part")
-	            end
-	        end)
-	    end
+		if button and tppart then
+			button.MouseButton1Click:Connect(function()
+				local humanoidRootPart = player.Character:FindFirstChild('HumanoidRootPart')
+				if humanoidRootPart and tppart:IsA("BasePart") then -- Check if HumanoidRootPart exists and tppart is a valid part
+					humanoidRootPart.CFrame = tppart.CFrame
+				else
+					warn("Teleport failed: Missing or invalid part")
+				end
+			end)
+		end
 	end
 
-	
+	local function KSFOVcreatepickerfunction(button, part)
+		if button and part then
+			button.MouseButton1Click:Connect(function()
+				local humanoidRootPart = player.Character:FindFirstChild('HumanoidRootPart')
+				if humanoidRootPart and part:IsA("BasePart") then -- Check if HumanoidRootPart exists and part is valid
+					firetouchinterest(humanoidRootPart, part, 0)
+				else
+					warn("Picker failed: Missing or invalid part")
+				end
+			end)
+		end
+	end
+
+
 	for _, data in pairs(teleportData) do
 		local success, errorMessage = pcall(function()
 			KSFOVcreatetpsfunction(data.button, data.part)
 		end)
-		
+
 		if not success then
 			-- Log the error to the output for debugging
 			warn("Error while creating teleport function for button: ", data.button, "\nError: ", errorMessage)
@@ -4206,7 +4334,7 @@ if game.PlaceId == 17033012939 then
 		local success, errorMessage = pcall(function()
 			KSFOVcreatepickerfunction(data.button, data.part)
 		end)
-		
+
 		if not success then
 			-- Log the error to the output for debugging
 			warn("Error while creating Picker function for button: ", data.button, "\nError: ", errorMessage)
