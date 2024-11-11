@@ -65,7 +65,7 @@ local function toggleRun()
             end
             if not runAnimTrack.IsPlaying then
                 runAnimTrack:Play()
-                runAnimTrack:AdjustWeight(10.0)
+                runAnimTrack:AdjustWeight(1.0)
             end
             wait(afterimageInterval)
         end
