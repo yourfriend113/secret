@@ -3960,7 +3960,7 @@ local function createTrackID(animationId)
 		trackIDButton.Text = name
 		trackIDButton.Parent = Animations
 		trackIDButton.Visible = true
-		adjustAnimLogCanvasSize()
+		adjustCanvasSize()
 		trackIDButton.MouseButton1Click:Connect(function()
 			setclipboard(idNumber)
 		end)
