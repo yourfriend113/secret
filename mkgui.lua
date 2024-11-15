@@ -3945,7 +3945,7 @@ local currentAnimationTrack
 
 -- Function to adjust the CanvasSize based on the number of logs
 local function adjustCanvasSize()
-    local numLogs = #Animations:GetChildren() - 1 -- Subtract 1 for the UIGridLayout
+    local numLogs = #Animations:GetChildren() - 5 -- Subtract 1 for the UIGridLayout
     local newCanvasSizeY = math.max(numLogs * UIGridLayout.CellSize.Y.Offset, Animations.AbsoluteSize.Y)
     
     -- Set new CanvasSize with some buffer space
