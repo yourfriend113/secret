@@ -1,0 +1,102 @@
+-- prototype
+local animations = {
+    ["10469493270"] = {
+        sequence = {
+            {animationId = "13532562418", animationSpeed = 5, delay = 0},
+            {animationId = "13295919399", animationSpeed = 5, delay = 0.15},
+            {animationId = "16515520431", animationSpeed = 5, delay = 0.3}
+        }
+    },
+    ["10469630950"] = {
+        sequence = {
+            {animationId = "16515448089", animationSpeed = 5, delay = 0},
+            {animationId = "13532600125", animationSpeed = 5, delay = 0.13},
+            {animationId = "13295936866", animationSpeed = 5, delay = 0.3}
+        }
+    },
+    ["10469639222"] = {
+        sequence = {
+            {animationId = "13532562418", animationSpeed = 5, delay = 0},
+            {animationId = "13296577783", animationSpeed = 5, delay = 0.14},
+            {animationId = "13378751717", animationSpeed = 5, delay = 0.35}
+        }
+    },
+    ["10469643643"] = {
+        sequence = {
+            {animationId = "13365849295", animationSpeed = 2, delay = 0}
+        }
+    },
+    ["10466974800"] = {
+        sequence = {
+            {animationId = "12273188754", animationSpeed = 4, delay = 0.2},
+            {animationId = "12534735382", animationSpeed = 3.5, delay = 0.4},
+            {animationId = "12460977270", animationSpeed = 1.7, delay = 0.7},
+        }
+    },
+    ["12510170988"] = {
+        sequence = {
+            {animationId = "14004235777", animationSpeed = 1.2, delay = 0},
+            {animationId = "13501296372", animationSpeed = 1, delay = 0.01},
+        }
+    },
+    ["15955393872"] = {
+        sequence = {
+            {animationId = "16023456135", animationSpeed = 1.7, delay = 0.01},
+            {animationId = "16310343179", animationSpeed = 1.1, delay = 0},
+        }
+    },
+    ["12447707844"] = {
+        sequence = {
+            {animationId = "13633468484", animationSpeed = 1.7, delay = 0},
+        }
+    },
+    ["13927612951"] = {
+        sequence = {
+            {animationId = "10473655082", animationSpeed = 1, delay = 0},
+        }
+    },
+}
+
+local player = game.Players.LocalPlayer
+local function playAnimation(character, animId, speed)
+    local animation = Instance.new("Animation")
+    animation.AnimationId = "rbxassetid://" .. animId
+
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        local animationTrack = humanoid:LoadAnimation(animation)
+        animationTrack:Play()
+        animationTrack:AdjustSpeed(speed)
+    end
+end
+local function playAnimationSequence(character, sequence)
+    for i, animationData in ipairs(sequence) do
+        delay(animationData.delay, function()
+            playAnimation(character, animationData.animationId, animationData.animationSpeed)
+        end)
+    end
+end
+
+local function onAnimationPlayed(animationTrack)
+    if animationTrack and animationTrack.Animation then
+        local targetAnimationId = string.match(animationTrack.Animation.AnimationId, "%d+")
+        if animations[targetAnimationId] then
+            animationTrack:Stop()
+            local character = player.Character
+            if character then
+                local animationData = animations[targetAnimationId]
+                playAnimationSequence(character, animationData.sequence)
+            end
+        end
+    end
+end
+local function onCharacterAdded(character)
+    local humanoid = character:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.AnimationPlayed:Connect(onAnimationPlayed)
+    end
+end
+if player.Character then
+    onCharacterAdded(player.Character)
+end
+player.CharacterAdded:Connect(onCharacterAdded)
