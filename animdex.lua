@@ -806,12 +806,17 @@ end
 
 -- Listen for animations being played
 local function trackPlayerAnimations(humanoid)
-	-- Connect to AnimationPlayed event
 	humanoid.AnimationPlayed:Connect(function(animationTrack)
-		-- Add animation to the log
-		createAnimationLog(animationTrack)
+		-- Wait a brief moment to let it start
+		task.delay(0.1, function()
+			if animationTrack and animationTrack.IsPlaying and animationTrack.Length > 0 then
+				-- Animation is playing and valid
+				createAnimationLog(animationTrack)
+			end
+		end)
 	end)
 end
+
 
 -- Assuming ClearLogs is a button in the UI
 ClearLogs.MouseButton1Click:Connect(function()
